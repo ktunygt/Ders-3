@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Başlık</title>
+
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 20px;
+                background-color: white;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                max-width: 800px;
+            }
+
+            .header {
+                background-color: #e0f7fa;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .content {
+                background-color: #fce4ec;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .form-container {
+                background-color: #e8f5e9;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .link-container {
+                background-color: #fff3e0;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            .image-container {
+                background-color: #ede7f6;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                color: blue;
+                font-size: 24px;
+                text-align: center;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            li {
+                margin-bottom: 8px;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-weight: bold;
+            }
+
+            input, textarea {
+                padding: 8px;
+                margin-bottom: 10px;
+                width: 100%;
+                box-sizing: border-box;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+
+            button {
+                padding: 10px 15px;
+                background-color: blue;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+
+            button:hover {
+                background-color: darkblue;
+            }
+
+            a {
+                color: blue;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            img {
+                width: 200px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+
+            @media (max-width: 600px) {
+                h1 {
+                    font-size: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <%- include("../partials/alert") %>
+
+        <div class="container header">
+            <h1>Merhaba Dünya!</h1>  
+            <h2>Merhaba Dünya!</h2>  
+            <h3>Merhaba Dünya!</h3>  
+            <h4>Merhaba Dünya!</h4>  
+            <h5>Merhaba Dünya!</h5>  
+        </div>
+
+        <div class="container content">
+            <p>Bu bir paragraf örneğidir.</p>  
+            <p id="demo" onclick="changeText()">Bu metin değişecek...</p>
+
+            <ol>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <ul style="list-style-type: square; color: #ccc;">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <ul style="list-style-type: circle;">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+
+            <ul style="list-style-type: none;">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+
+        <div class="container form-container">
+            <form method="post" action="/home">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" placeholder="Adınızı giriniz..." required>
+
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" placeholder="E-posta adresinizi giriniz...">
+
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="password" placeholder="E-posta adresinizi giriniz...">
+
+                <button type="submit">Gönder</button>
+            </form>
+        </div>
+
+        <div class="container link-container">
+            <p><a href="https://proto.ktun.edu.tr/Home/ToplulukProfili/Tqatdfo__Td9hRkZh__cB3YA==" target="_blank">Bu linke tıklayarak başka bir sayfaya gidebilirsiniz.</a></p>
+        </div>
+
+        <div class="container image-container">
+            <img src="https://topluluk.ktun.edu.tr//Content/Etkinlik/Evrak/1029_Etkinlik_Form_OTK-011_1089.jpg" alt="Örnek Resim">
+        </div>
+
+        <script>
+            function changeText() {
+                document.getElementById('demo').innerHTML = 'Merhaba, JavaScript!';
+            }
+        </script>
+    </body>
+</html>
